@@ -1,0 +1,23 @@
+<table>
+    <thead>
+        <tr>
+        <th>First Name</th>
+        <th>Last Name</th>
+        <th>Address1</th>
+        <th>Address2</th>
+        <th>City</th>
+        <th>Zip</th>
+        </tr>
+    </thead>
+    <tbody>
+    {{ $url := "https://people.sc.fsu.edu/~jburkardt/data/csv/addresses.csv" }}
+    {{ $sep := "," }}
+    {{ range $i, $r := getCSV $sep $url }}
+            <tr>
+                    {{ range  $r }}
+                    <td>{{ . }}</td>
+                    {{end}}
+            </tr>
+    {{ end }}
+    </tbody>
+</table>

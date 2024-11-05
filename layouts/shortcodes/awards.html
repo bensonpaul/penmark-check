@@ -1,0 +1,10 @@
+{{ $url := "/data/state.json" }}
+{{ $year := .Get "year" }}
+{{ $rally := (index $.Page.Site.Data.rallies $year) }}
+{{ with $rally.awards }}
+{{ range $award := $rally.awards }}
+        <div>{{ $award.award }}</div>
+        <div>{{ range $recip := $award.recipients }}{{ $recip }}<br/>{{ end }}</div>
+    {{ end }}
+{{ end }}
+

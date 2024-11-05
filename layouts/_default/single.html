@@ -1,0 +1,30 @@
+{{ partial "general-title" . }}
+
+{{ partial "header" . }}
+    {{ partial "navbar" . }}
+    <!-- Main -->
+    <div id="main">
+        <article class="post">
+            {{ $.Scratch.Set "h1" true }}
+            {{ .Render "header" }}
+            <script 
+                        type="module" 
+                        src="https://penmark.appsinprogress.com/dist/PostClient.js"
+                        draftsFolder="drafts"
+                        postsFolder="content/blog"
+                        githubUsername="bensonpaul"
+                        githubRepoName="devl-ubhealth"
+                        githubBranchName="master"
+                        postfilepath="{{ .Params.contentPath }}"
+                    ></script>
+            <div id="content">
+                {{ .Content }}
+            </div>
+            
+            
+
+        </article>
+    </div>
+
+    {{ partial "sidebar" . }}
+{{ partial "footer" . }}

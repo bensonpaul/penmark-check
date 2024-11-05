@@ -1,7 +1,11 @@
-baseURL = 'https://example.org/'
-languageCode = 'en-us'
-title = 'My New Hugo Site'
-theme = 'potato-dark'
+#Uncomment as needed
+#baseurl = "Your site URL"
+languageCode = "en-us"
+Title = "Your site title"
+# Copyright notice. This is displayed in the footer.
+copyright = "&copy; Copyright notice"
+theme = "potato-dark"
+
 [params]
   paginate = 10
   # Social accounts. Link to these accounts are displayed in the header and

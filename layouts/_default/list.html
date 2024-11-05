@@ -1,0 +1,19 @@
+{{ partial "header.html" . }}
+<h2 class="c-title p-tag-title">{{ .Title }}</h2>
+<script 
+    type="module" 
+    src="https://penmark.appsinprogress.com/dist/PostClient.js"
+    draftsFolder="drafts"
+    postsFolder="content/posts"
+    githubUsername="bensonpaul"
+    githubRepoName="penmark-check"
+    githubBranchName="master"
+    postfilepath="{{ .Params.contentPath }}"
+></script>
+{{ range $index, $page := (.Paginate (where .Data.Pages "Type" "posts")).Pages }}
+{{ if ne $index 0 }}
+{{ end }}
+{{ .Render "li" }}
+{{ end }}
+{{ partial "pagination.html" .Paginator }}
+{{ partial "footer.html" . }}

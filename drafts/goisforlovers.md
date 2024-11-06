@@ -13,7 +13,6 @@ categories = [
     "Development",
     "golang",
 ]
-draft ="true"
 +++
 
 Hugo uses the excellent [go][] [html/template][gohtmltemplate] library for

@@ -1,6 +1,16 @@
 {{ partial "header.html" . }}
 {{ $baseurl := .Site.BaseURL | sanitizeurl }}
 <article class="p-article">
+  <script 
+    src="https://penmark.appsinprogress.com/dist/PostClient.js"
+    draftsFolder="drafts"
+    postsFolder="content/posts"
+    githubUsername="bensonpaul"
+    githubRepoName="penmark-check"
+    githubBranchName="master"
+    postfilepath="{{ .RelPermalink }}"
+    
+></script>
   <header>
     <h1>{{ .Title }}</h1>
     <div>
@@ -15,17 +25,7 @@
       {{ end }}
     </div>
     
-    <script 
-    type="module" 
-    src="https://penmark.appsinprogress.com/dist/PostClient.js"
-    draftsFolder="drafts"
-    postsFolder="content/posts"
-    githubUsername="bensonpaul"
-    githubRepoName="penmark-check"
-    githubBranchName="master"
-    postfilepath="https://api.github.com/repos/bensonpaul/penmark-check/contents/content/posts"
     
-></script>
   </header>
   {{ with .Params.thumbnail }}
     <img src="{{ . }}" alt="thumbnail" class="p-article__thumbnail">

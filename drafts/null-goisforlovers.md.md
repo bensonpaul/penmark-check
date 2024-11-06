@@ -307,6 +307,7 @@ Here is the example front matter:
 
 ```
 
+
 ---
 title: "Permalinks"
 date: "2013-11-18"
@@ -315,6 +316,7 @@ aliases:
 groups: ["extras"]
 groups_weight: 30
 notoc: true
+
 
 ---
 ```

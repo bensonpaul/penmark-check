@@ -3,6 +3,7 @@ languageCode = 'en-us'
 title = 'My New Hugo Site'
 theme = 'potato-dark'
 [params]
+ contentPath = "https://api.github.com/repositories/883625574/contents/content/posts"
   paginate = 10
   # Social accounts. Link to these accounts are displayed in the header and
   # footer

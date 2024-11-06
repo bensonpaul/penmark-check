@@ -1,12 +1,14 @@
 {{ partial "header.html" . }}
 <script 
 draftsFolder="drafts"
+src="https://penmark.appsinprogress.com/dist/DraftsClient.js"
 postsFolder="content/posts"
 githubUsername="bensonpaul"
 githubRepoName="penmark-check"
 githubBranchName="master"
-postfilepath="{{ .Params.contentPath }}"
+postfilepath="{{ .RelPermalink }}"
 ></script>
+
 {{ range $index, $page := (.Paginate (where (where site.RegularPages "Type" "posts") ".Params.hidden" "ne" "true" )).Pages }}
 {{ if ne $index 0 }}
 {{ end }}
